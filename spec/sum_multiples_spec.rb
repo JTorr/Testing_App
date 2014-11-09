@@ -28,4 +28,12 @@ describe 'SumMultiples' do
       expect(is_divisible_by_fifteen?(1)).to be_falsey
     end
   end
+
+  context 'it finds all multiples of 3 and 5' do
+    it 'up to and including 10' do
+      expect(find_all_multiples(10)).to include 3
+      expect(find_all_multiples(10)).to include 5
+      expect(find_all_multiples(10)).not_to include 1
+    end
+  end
 end
