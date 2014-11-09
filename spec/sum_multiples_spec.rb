@@ -36,4 +36,10 @@ describe 'SumMultiples' do
       expect(find_all_multiples(10)).not_to include 1
     end
   end
+
+  context 'it sums all multiples of 3 and 5' do
+    it 'up to and including 10' do
+      expect(sum_multiples(10)).to eq 33
+    end
+  end
 end

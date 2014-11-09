@@ -19,3 +19,8 @@ def find_all_multiples(number)
   1.upto(number) { |number| arr << number if is_divisible_by(number, 3) || is_divisible_by(number, 5) }
   return arr
 end
+
+def sum_multiples(number)
+  arr = find_all_multiples(number)
+  arr.reduce(:+)
+end
