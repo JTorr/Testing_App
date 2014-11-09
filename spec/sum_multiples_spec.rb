@@ -41,5 +41,9 @@ describe 'SumMultiples' do
     it 'up to and including 10' do
       expect(sum_multiples(10)).to eq 33
     end
+
+    it 'up to and including 15' do
+      expect(sum_multiples(15)).to eq 60
+    end
   end
 end

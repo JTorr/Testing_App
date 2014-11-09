@@ -24,3 +24,6 @@ def sum_multiples(number)
   arr = find_all_multiples(number)
   arr.reduce(:+)
 end
+
+puts sum_multiples(100)
+#2418
