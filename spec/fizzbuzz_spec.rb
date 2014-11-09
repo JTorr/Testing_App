@@ -23,5 +23,9 @@ describe 'FizzBuzz' do
     it '5' do
       expect(is_divisible_by_five?(3)).to be_falsey
     end
+
+    it '15' do
+      expect(is_divisible_by_fifteen?(1)).to be_falsey
+    end
   end
 end
