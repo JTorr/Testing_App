@@ -13,15 +13,15 @@ describe 'Palindrome' do
   end
 
 
-  # before(:all) do
-  #   @palindromes = []
-  # end
-  #
-  # context 'finds all palindromes' do
-  #   it 'between 10 and 99 inclusive' do
-  #     @palindromes = find_palindromes(10, 99)
-  #     expect(@palindromes).to include(11, 22, 33, 44, 55, 66, 77, 88, 99)
-  #     expect(@palindromes).not_to include 20
-  #   end
-  # end
+  before(:all) do
+    @palindromes = []
+  end
+
+  context 'finds all palindromes' do
+    it 'between 10 and 99 inclusive' do
+      @palindromes = find_palindromes(10, 99)
+      expect(@palindromes).to include(11, 22, 33, 44, 55, 66, 77, 88, 99)
+      expect(@palindromes).not_to include 20
+    end
+  end
 end
