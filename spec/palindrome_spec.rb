@@ -43,12 +43,26 @@ describe 'Palindrome' do
     end
   end
 
-  context 'returns the largest factor' do
-    it 'of the largest palindrome' do
+  context 'after finding the largest palindrome' do
+    it 'finds the largest factor' do
       factors = [1, 99, 11, 9, 33, 3]
       @max_factor = find_max_factor(factors)
       expect(@max_factor).to eq 99
       expect(factors).not_to include(99)
+    end
+  end
+
+  context 'after finding the largest factor' do
+    it 'checks for a matching 2-digit factor' do
+      #TODO: define test
+    end
+  end
+
+  #It returns the palindrome and exits the program if there are 2 matching factors
+
+  context 'when all factors are eliminated' do
+    it 'finds the next largest palindrome' do
+      #TODO: define test
     end
   end
 
