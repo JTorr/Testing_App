@@ -34,6 +34,16 @@ describe 'Palindrome' do
     end
   end
 
+  context 'returns the largest palindrome' do
+    it 'from the list of possible answers' do
+      palindromes = [77, 88, 99]
+      @max = largest_palindrome(palindromes)
+      expect(@max).to eq 99
+      expect(palindromes).not_to include(99)
+    end
+  end
+
+
 
 
 end

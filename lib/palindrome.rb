@@ -21,3 +21,8 @@ def find_factors(palindrome, start_num, end_num)
   end
   @factors
 end
+
+def largest_palindrome(palindromes)
+  @palindromes = palindromes
+  @max = @palindromes.pop
+end
