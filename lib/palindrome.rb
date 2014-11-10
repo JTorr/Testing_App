@@ -25,7 +25,7 @@ def find_factors(palindrome, digits)
 end
 
 def largest_palindrome(palindromes)
-  @palindromes = palindromes
+  @palindromes = palindromes.sort!
   @max = @palindromes.pop
 end
 
@@ -36,16 +36,19 @@ end
 
 def find_second_factor(palindrome, max_factor, factors)
   a = factors.pop
+  return nil if a == nil
   return a if max_factor * a == palindrome
   find_second_factor(palindrome, max_factor, factors)
 end
 
-def find_answer(start_range, end_range, digits)
-  palindromes = find_palindromes(start_range, end_range)
+def find_answer(palindromes, digits)
   palindrome = largest_palindrome(palindromes)
   factors = find_factors(palindrome, digits)
   max_factor = find_max_factor(factors)
   second_factor = find_second_factor(palindrome, max_factor, factors)
   return palindrome if second_factor != nil
-  find_answer
+  find_answer(palindromes, digits)
 end
+
+palindromes = find_palindromes(1001, 9999)
+puts find_answer(palindromes, 2)

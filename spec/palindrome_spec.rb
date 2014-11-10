@@ -59,12 +59,12 @@ describe 'Palindrome' do
     end
   end
 
-  # context 'finds a palindrome with 2 matching factors' do
-  #   it 'returns the palindrome and exits the program' do
-  #     answer = find_answer(1001, 9999, 2)
-  #     expect(answer).to eq(9009)
-  #   end
-  # end
+  context 'finds a palindrome with 2 matching factors' do
+    it 'returns the palindrome and exits the program' do
+      answer = find_answer([1001, 9009, 9999].to_a, 2)
+      expect(answer).to eq(9009)
+    end
+  end
 
 
   #It returns the palindrome and exits the program if there are 2 matching factors
