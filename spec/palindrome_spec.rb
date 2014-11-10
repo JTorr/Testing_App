@@ -28,7 +28,7 @@ describe 'Palindrome' do
 
   context 'finds all factors of a palindrome' do
     it 'with 2 digits' do
-      @factors = find_factors(22, 10, 99, 2)
+      @factors = find_factors(22, 2)
       expect(@factors).to include(11, 22)
       expect(@factors).not_to include(1, 2)
     end
@@ -54,14 +54,19 @@ describe 'Palindrome' do
 
   context 'checks the largest factor' do
     it 'returns a matching factor with the same number of digits' do
-      palindrome = 9009
-      max_factor = 99
       second_factor = find_second_factor(9009, 99, (0..99).to_a)
       expect(second_factor).to eq(91)
     end
   end
 
-  #It tries the next factor if there is no match
+  # context 'finds a palindrome with 2 matching factors' do
+  #   it 'returns the palindrome and exits the program' do
+  #     answer = find_answer(1001, 9999, 2)
+  #     expect(answer).to eq(9009)
+  #   end
+  # end
+
+
   #It returns the palindrome and exits the program if there are 2 matching factors
 
   # context 'when all factors are eliminated' do
