@@ -15,9 +15,9 @@ def find_palindromes(first_num, last_num)
   @palindromes
 end
 
-def find_factors(palindrome, start_num, end_num)
+def find_factors(palindrome, start_num, end_num, digits)
   for i in start_num..end_num
-    @factors << i if palindrome % i == 0
+    @factors << i if palindrome % i == 0 && i.to_s.length == digits
   end
   @factors
 end
@@ -30,4 +30,10 @@ end
 def find_max_factor(factors)
   @factors = factors.sort!
   @max_factor = @factors.pop
+end
+
+def find_second_factor(palindrome, max_factor, factors)
+  a = factors.pop
+  return a if max_factor * a == palindrome
+  find_second_factor(palindrome, max_factor, factors)
 end
