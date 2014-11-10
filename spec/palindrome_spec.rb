@@ -43,6 +43,15 @@ describe 'Palindrome' do
     end
   end
 
+  context 'returns the largest factor' do
+    it 'of the largest palindrome' do
+      factors = [1, 99, 11, 9, 33, 3]
+      @max_factor = find_max_factor(factors)
+      expect(@max_factor).to eq 99
+      expect(factors).not_to include(99)
+    end
+  end
+
 
 
 

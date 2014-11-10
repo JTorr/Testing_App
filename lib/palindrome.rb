@@ -26,3 +26,8 @@ def largest_palindrome(palindromes)
   @palindromes = palindromes
   @max = @palindromes.pop
 end
+
+def find_max_factor(factors)
+  @factors = factors.sort!
+  @max_factor = @factors.pop
+end
