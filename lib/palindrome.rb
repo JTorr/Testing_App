@@ -40,13 +40,12 @@ def find_second_factor(palindrome, max_factor, factors)
   find_second_factor(palindrome, max_factor, factors)
 end
 
-# def find_answer(start_range, end_range, digits)
-#   palindromes = find_palindromes(start_range, end_range)
-#   palindrome = largest_palindrome(palindromes)
-#   factors = find_factors(palindrome, )
-#
-#   find_second_factor(palindrome, max_factor, factors)
-#   return palindrome if second_factor != nil
-#
-#
-# end
+def find_answer(start_range, end_range, digits)
+  palindromes = find_palindromes(start_range, end_range)
+  palindrome = largest_palindrome(palindromes)
+  factors = find_factors(palindrome, digits)
+  max_factor = find_max_factor(factors)
+  second_factor = find_second_factor(palindrome, max_factor, factors)
+  return palindrome if second_factor != nil
+  find_answer
+end
