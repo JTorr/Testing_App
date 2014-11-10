@@ -42,7 +42,8 @@ def find_second_factor(palindrome, max_factor, factors)
 end
 
 def find_answer(palindromes, digits)
-  palindrome = largest_palindrome(palindromes)
+  digits = digits.to_i
+  palindrome = largest_palindrome(palindromes).to_i
   factors = find_factors(palindrome, digits)
   max_factor = find_max_factor(factors)
   second_factor = find_second_factor(palindrome, max_factor, factors)
@@ -50,5 +51,5 @@ def find_answer(palindromes, digits)
   find_answer(palindromes, digits)
 end
 
-palindromes = find_palindromes(1001, 9999)
-puts find_answer(palindromes, 2)
+palindromes = find_palindromes(10000, 998001)
+puts find_answer(palindromes, 3)
