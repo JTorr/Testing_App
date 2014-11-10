@@ -15,6 +15,7 @@ describe 'Palindrome' do
 
   before(:all) do
     @palindromes = []
+    @factors = []
   end
 
   context 'finds all palindromes' do
@@ -24,4 +25,15 @@ describe 'Palindrome' do
       expect(@palindromes).not_to include 20
     end
   end
+
+  context 'finds all factors of a palindrome' do
+    it 'with 2 digits' do
+      @factors = find_factors(22, 10, 99)
+      expect(@factors).to include(11, 22)
+      expect(@factors).not_to include(1, 2)
+    end
+  end
+
+
+
 end
