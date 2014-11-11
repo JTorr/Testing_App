@@ -26,4 +26,19 @@ describe 'SmallestMultiple' do
       expect(result).to be_falsey
     end
   end
+
+  context 'has a method called find_smallest_multiple' do
+    it 'returns 2520 when range of divisors is 1..10' do
+      divisors = (1..10).to_a
+      result = find_smallest_multiple(divisors)
+      expect(result).to eq 2520
+    end
+
+    it 'returns 232792560 when range of divisiors is 1..20' do
+      divisors = (1..20).to_a
+      result = find_smallest_multiple(divisors)
+      expect(result).to eq 232792560
+    end
+  end
+
 end

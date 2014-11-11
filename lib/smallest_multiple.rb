@@ -12,3 +12,14 @@ def check_divisibility(number, divisors)
   end
   true
 end
+
+#TODO: refactor to exclude divisors that are multiples of each other
+def find_smallest_multiple(divisors)
+  max_product = divisors.reduce(1,:*)
+  smallest = 1
+  while smallest < max_product
+    return smallest if check_divisibility(smallest, divisors)
+    smallest += 1
+  end
+  max_product
+end
