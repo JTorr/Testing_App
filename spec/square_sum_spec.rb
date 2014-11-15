@@ -15,5 +15,10 @@ describe 'SquareSum' do
     end
   end
 
-
+  context 'has a method called square_all' do
+    it 'returns an array of 1..5 squared' do
+      result = square_all([1, 2, 3, 4, 5])
+      expect(result).to match_array([1, 4, 9, 16, 25])
+    end
+  end
 end

@@ -15,3 +15,7 @@ end
 def find_number_range(first, last)
   (first..last).to_a
 end
+
+def square_all(array)
+  array.map { |num| num ** 2}
+end
