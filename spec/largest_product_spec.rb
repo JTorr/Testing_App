@@ -15,4 +15,10 @@ describe 'LargestProduct' do
     end
   end
 
+  context 'has a method called compare_products' do
+    it 'returns the array with the largest product' do
+      result = compare_products([1, 2, 3, 4], [2, 3, 4, 5])
+      expect(result).to match_array([2, 3, 4, 5])
+    end
+  end
 end
