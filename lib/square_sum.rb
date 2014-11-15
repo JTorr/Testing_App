@@ -11,3 +11,7 @@
 def find_square(number)
   number ** 2
 end
+
+def find_number_range(first, last)
+  (first..last).to_a
+end
