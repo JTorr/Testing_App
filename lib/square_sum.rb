@@ -35,3 +35,7 @@ def square_the_sum(first, last)
   sum = sum_all(array)
   find_square(sum)
 end
+
+def find_difference(first, last)
+  square_the_sum(first, last) - sum_squares(first, last)
+end

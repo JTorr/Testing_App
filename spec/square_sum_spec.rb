@@ -42,4 +42,11 @@ describe 'SquareSum' do
       expect(result).to eq 3025
     end
   end
+
+  context 'has a method called find_difference' do
+    it 'returns 2640 for a range of 1..10' do
+      result = find_difference(1, 10)
+      expect(result).to eq 2640
+    end
+  end
 end
