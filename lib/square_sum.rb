@@ -29,3 +29,9 @@ def sum_squares(first, last)
   squares = square_all(array)
   sum_all(squares)
 end
+
+def square_the_sum(first, last)
+  array = find_number_range(first, last)
+  sum = sum_all(array)
+  find_square(sum)
+end

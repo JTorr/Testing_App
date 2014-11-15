@@ -35,4 +35,11 @@ describe 'SquareSum' do
       expect(result).to eq 385
     end
   end
+
+  context 'has a method called square_the_sum' do
+    it 'returns 3025 for a range of 1..10' do
+      result = square_the_sum(1, 10)
+      expect(result).to eq 3025
+    end
+  end
 end
