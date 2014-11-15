@@ -21,4 +21,12 @@ describe 'LargestProduct' do
       expect(result).to match_array([2, 3, 4, 5])
     end
   end
+
+  context 'when no sub-arrays have been eliminated' do
+    it 'the method next_array returns the next 4 elements' do
+      result = next_array([1, 2, 3, 4, 5, 6], 0, 4)
+      expect(result).to match_array([2, 3, 4, 5])
+    end
+  end
+
 end
