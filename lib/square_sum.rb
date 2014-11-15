@@ -19,3 +19,7 @@ end
 def square_all(array)
   array.map { |num| num ** 2}
 end
+
+def sum_all(array)
+  array.reduce(:+)
+end

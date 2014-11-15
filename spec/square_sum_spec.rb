@@ -21,4 +21,11 @@ describe 'SquareSum' do
       expect(result).to match_array([1, 4, 9, 16, 25])
     end
   end
+
+  context 'has a method called sum_all' do
+    it 'returns the sum of 15 for an array of numbers 1..5' do
+      result = sum_all([1, 2, 3, 4, 5])
+      expect(result).to eq 15
+    end
+  end
 end
