@@ -32,7 +32,7 @@ describe 'LargestProduct' do
   context 'has a method called largest_array' do
     it 'returns an empty array when no arrays have been eliminated' do
       result = largest_array
-      expect(result).to match_array([1, 2, 3, 4])
+      expect(result).to match_array([])
       next_arr = next_array([1, 2, 3, 4, 5, 6], 0, 4)
     end
   end

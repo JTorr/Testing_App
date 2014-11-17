@@ -42,5 +42,5 @@ def next_array(array, last_eliminated = @last_eliminated_start, length)
 end
 
 def largest_array
-  # @largest_series
+  return @largest_series.to_a
 end
